@@ -1,0 +1,83 @@
+/* Samsung Galaxy S8+ */
+@media screen and (max-width: 360px) and (min-width: 360px){
+    body{
+        background-color: var(--s8pl-main-color);
+
+    }
+    .Samsung-Galaxy-S8Plus{font-size: 1em;}
+    .Surface-Duo{display:none;}
+    .Surface-Pro-7{display:none;}
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 1px;
+        background-color: #000000;
+        padding: 3px;
+        margin-top: 0%;
+      }
+      
+      .grid-container > button {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 2%;
+      }
+
+    .art{
+        margin-top: 3%;
+        margin-left: 10%;
+        margin-right: 10%;
+        box-sizing: content-box;
+        max-width: 80%;
+        padding: 0.5%;
+    }
+
+    .chart{
+        padding: 0.5%;
+        border: 2px solid var(--s8pl-b-color);
+    }
+
+    .previous{
+        margin-top: 3%;
+        margin-left: 10%;
+        margin-right: 10%;
+        box-sizing: content-box;
+        max-width: 80%;
+        padding: 0.5%;
+        content: none;
+    }
+
+    .upcoming{
+        margin-top: 3%;
+        margin-left: 10%;
+        margin-right: 10%;
+        box-sizing: content-box;
+        max-width: 80%;
+        padding: 0.5%;
+        content: none;
+    }
+
+    .prognosis{
+        margin-top: 3%;
+        margin-left: 10%;
+        margin-right: 10%;
+        box-sizing: content-box;
+        max-width: 80%;
+        padding: 0.5%;
+        content: none;
+    }
+
+    .name{
+        padding: 0.5%;
+        border: 2px solid var(--s8pl-b-color);
+        width: fit-content;
+        max-width: 50%;
+    }
+
+    .explanation{
+        padding: 0.5%;
+        border: 2px solid var(--s8pl-b-color);
+        width: fit-content;
+        max-width: 100%;
+    }
+}

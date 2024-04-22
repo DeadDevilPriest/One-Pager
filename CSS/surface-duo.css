@@ -1,0 +1,9 @@
+/* Surface Duo */
+@media screen and (max-width: 550px) and (min-width: 540px){
+    body{
+        background-color: var(--s-duo-main-color);
+    }
+    .Surface-Duo{font-size: 1em;}
+    .Samsung-Galaxy-S8Plus{display:none;}
+    .Surface-Pro-7{display:none;}
+}
