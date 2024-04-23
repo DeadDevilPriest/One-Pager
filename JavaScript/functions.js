@@ -62,71 +62,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 // Difinieren der Arrays
-let arr1 = [];
-let arr2 = [];
+let arr1 = ["a", "b", "c", "d", "e", "f", "g"];
+let arr2 = ["A", "B", "C", "D", "E", "F", "G"];
 let arr3 = [7, 2, 6, 5, 4, 2, 3];
 let arr4 = [5, 6, 8, 3, 2, 4, 5];
-
-// Funktion zum auslesen der gegebenen Daten
-const fs = require("fs");
-
-// Function to read data from a text file and organize into arrays
-function readDataFromFile(filePath) {
-    try {
-        const text = fs.readFileSync(filePath, 'utf-8');
-        const lines = text.split("\n");
-
-        const numbersArray = [];
-        const textStringsArray = [];
-
-        lines.forEach(line => {
-            const trimmedLine = line.trim();
-            if (isNaN(trimmedLine)) {
-                textStringsArray.push(trimmedLine); // If not a number, treat as text string
-            } else {
-                const numberValue = parseFloat(trimmedLine);
-                if (!isNaN(numberValue)) {
-                    numbersArray.push(numberValue); // If valid number, add to numbersArray
-                }
-            }
-        });
-
-        return { numbersArray, textStringsArray };
-    } catch (err) {
-        console.error(`Error reading file ${filePath}:`, err);
-        return { numbersArray: [], textStringsArray: [] };
-    }
-}
-
-// Function to read data from both files and organize into arrays
-function dataRead() {
-    const filePath1 = "...\data\original.txt";
-    const filePath2 = "...\data\remake.txt";
-
-    const { numbersArray: numbersArray1, textStringsArray: textStringsArray1 } = readDataFromFile(filePath1);
-    const { numbersArray: numbersArray2, textStringsArray: textStringsArray2 } = readDataFromFile(filePath2);
-
-    return { numbersArray1, textStringsArray1, numbersArray2, textStringsArray2 };
-}
-
-// Usage: Read data from files and use the obtained arrays
-const { numbersArray1, textStringsArray1, numbersArray2, textStringsArray2 } = dataRead();
-
-// Example usage of the arrays
-console.log("Numbers Array 1:", numbersArray1);
-console.log("Text Strings Array 1:", textStringsArray1);
-console.log("Numbers Array 2:", numbersArray2);
-console.log("Text Strings Array 2:", textStringsArray2);
 
 // Funktion zum Erstellen und Anzeigen des Gamecharts (Kurvendiagramm)
 function createGameChart() {
     // Daten für das Diagramm (Beispielwerte)
     const gameData = {
-        labels: textStringsArray1, textStringsArray2,
+        labels: [arr1, arr2,],  // Labels for the X-Axis
         datasets: [
             {
                 label: 'Bewertung',
-                data: numbersArray1, // Bewertungen von 0 bis 8, letzter Punkt ist null
+                data: [arr3,], // Bewertungen von 0 bis 8, letzter Punkt ist null
                 borderColor: 'rgba(75, 192, 192, 1)', // Linienfarbe für die ersten vier Punkte
                 borderWidth: 2, // Linienbreite
                 pointBackgroundColor: 'rgba(75, 192, 192, 1)', // Punkt-Farbe
@@ -136,7 +85,7 @@ function createGameChart() {
             },
             {
                 label: 'Bewertung (dotted)',
-                data: numbersArray2, // Null-Werte für die ersten vier Punkte, Bewertung für den letzten Punkt
+                data: [arr4,], // Null-Werte für die ersten vier Punkte, Bewertung für den letzten Punkt
                 borderColor: 'rgba(75, 192, 192, 1)', // Linienfarbe für den letzten Punkt
                 borderWidth: 2, // Linienbreite
                 borderDash: [6, 3], // Linienmuster (Dotted) für den letzten Punkt
@@ -155,6 +104,12 @@ function createGameChart() {
                             min: 0,
                             
                             max: 8 // Maximale y-Achsenwert      
+                    },
+
+                    x: {
+                        min: 0,
+                            
+                        max: 8 // Maximale x-Achsenwert
                     }
                }
             };
