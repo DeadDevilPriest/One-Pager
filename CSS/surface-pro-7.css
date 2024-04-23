@@ -24,8 +24,7 @@
         margin-top: 3%;
         margin-left: 10%;
         margin-right: 10%;
-        box-sizing: content-box;
-        max-width: 80%;
+        max-width: 70%;
         padding: 0.5%;
     }
 
@@ -34,49 +33,105 @@
         border: 2px solid var(--s-p-7-b-color);
     }
 
+    /* Previous */
+
     .previous{
         margin-top: 3%;
         margin-left: 10%;
         margin-right: 10%;
-        box-sizing: content-box;
         max-width: 80%;
         padding: 0.5%;
         content: none;
     }
+   
+    div.previous > div.art > div.explanation{
+        padding: 0.5%;
+        border: 2px solid var(--s-p-7-b-color);
+        max-width: 100%;
+    }
+    
+    div.previous > div.art > div.name{
+        padding: 0.5%;
+        border: 2px solid var(--s-p-7-b-color);
+        max-width: 60%;
+    }
+
+    div.previous > div.art{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+ 
+    /* Upcoming */
 
     .upcoming{
         margin-top: 3%;
         margin-left: 10%;
         margin-right: 10%;
-        box-sizing: content-box;
         max-width: 80%;
         padding: 0.5%;
         content: none;
     }
 
-    .prognosis{
-        margin-top: 3%;
-        margin-left: 10%;
-        margin-right: 10%;
-        box-sizing: content-box;
-        max-width: 80%;
-        padding: 0.5%;
-        content: none;
-    }
-
-    .name{
+    div.upcoming > div.art > div.name{
         padding: 0.5%;
         border: 2px solid var(--s-p-7-b-color);
-        width: fit-content;
-        max-width: 50%;
+        max-width: 25%;
     }
 
-    .explanation{
+    div.upcoming > div.art > div.explanation{
         padding: 0.5%;
         border: 2px solid var(--s-p-7-b-color);
-        width: fit-content;
         max-width: 100%;
     }
+
+    div.upcoming > div.art {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* Prognosis */
+    
+    .prognosis{
+        margin-top: 3%;
+        margin-left: 5%;
+        margin-right: 5%;
+        max-width: 90%;
+        padding: 0px;
+        content: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    div.prognosis > div.art > div.name{
+        padding: 0.5%;
+        border: 2px solid var(--s-p-7-b-color);
+        max-width: 60%;
+    }
+
+    div.prognosis > div.art  > div.explanation{
+        padding: 0%;
+        border: 2px solid var(--s-p-7-b-color);
+        max-width: 100%;
+        max-height: 30%;
+    }
+
+    div.prognosis > div.art.chart{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 0%;
+    }
+
+    div.prognosis > div.art {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+
 
     /*#1{
         margin-left: 10%;

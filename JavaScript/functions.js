@@ -62,76 +62,70 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+
 // Difinieren der Arrays
 let arr1 = ["a", "b", "c", "d", "e", "f", "g"];
 let arr2 = ["A", "B", "C", "D", "E", "F", "G"];
 let arr3 = [7, 2, 6, 5, 4, 2, 3];
 let arr4 = [5, 6, 8, 3, 2, 4, 5];
 
-// Funktion zum Erstellen und Anzeigen des Gamecharts (Kurvendiagramm)
-function createGameChart() {
-    // Daten für das Diagramm (Beispielwerte)
-    const gameData = {
-        labels: [],  // Labels for the X-Axis
-        datasets: [
-            {
-                label: 'Bewertung',
-                data: [arr3,], // Bewertungen von 0 bis 8, letzter Punkt ist null
-                borderColor: 'rgba(75, 192, 192, 1)', // Linienfarbe für die ersten vier Punkte
-                borderWidth: 2, // Linienbreite
-                pointBackgroundColor: 'rgba(75, 192, 192, 1)', // Punkt-Farbe
-                pointRadius: 5, // Punkt-Radius
-                pointHoverRadius: 8, // Punkt-Radius bei Hover
-                fill: false // Keine Füllung unter der Linie
-            },
-            
-            {
-                label: 'Bewertung (dotted)',
-                data: [arr4,], // Null-Werte für die ersten vier Punkte, Bewertung für den letzten Punkt
-                borderColor: 'rgba(75, 192, 192, 1)', // Linienfarbe für den letzten Punkt
-                borderWidth: 2, // Linienbreite
-                borderDash: [6, 3], // Linienmuster (Dotted) für den letzten Punkt
-                pointBackgroundColor: 'rgba(75, 192, 192, 1)', // Punkt-Farbe für den letzten Punkt
-                pointRadius: 5, // Punkt-Radius für den letzten Punkt
-                pointHoverRadius: 8, // Punkt-Radius bei Hover für den letzten Punkt
-                fill: false // Keine Füllung unter der Linie
-            }
-        ]
-    };
+// Function to sort the arrays and create the game charts
+function sortAndCreateGameCharts() {
+  // Create the game chart for arr1 and arr3
+  createGameChart('gameChart1', arr1, arr3);
 
-            // Optionen für das Diagramm
-            const gameOptions = {
-                scales: {
-                    y: {
-                            min: 0,
-                            
-                            max: 8 // Maximale y-Achsenwert      
-                    },
+  // Create the game chart for arr2 and arr4
+  createGameChart('gameChart2', arr2, arr4);
+}
 
-                    x: {
-                        ticks: {
-                         
-                        },
-                        min: 0,
-                            
-                        max: 8 // Maximale x-Achsenwert
-                    }
-               }
-            };
+// Function to create a game chart with the given chartId and arrays
+function createGameChart(chartId, arr1, arr3) {
+  // Daten für das Diagramm (Beispielwerte)
+  const gameData = {
+    labels: arr1,
+    datasets: [
+      {
+        label: 'Bewertung',
+        data: arr3,
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 2,
+        pointBackgroundColor: 'rgba(75, 192, 192, 1)',
+        pointRadius: 5,
+        pointHoverRadius: 8,
+        fill: false
+      }
+    ]
+  };
 
-            // Canvas-Element für das Diagramm
-            const ctx = document.getElementById('gameChart').getContext('2d');
+  // Optionen für das Diagramm
+  const gameOptions = {
+    scales: {
+      y: {
+        min: 0,
+        max: 8 // Maximale y-Achsenwert
+      },
+      x: {
+        ticks: {},
+        min: 0,
+        max: 8 // Maximale x-Achsenwert
+      }
+    }
+  };
 
-            // Erstellen des Kurvendiagramms (Liniendiagramms) mit Chart.js
-            const chart = new Chart(ctx, {
-            type: 'line', // Typ des Diagramms: Kurve (Liniendiagramm)
-            data: gameData,
-            options: gameOptions
-        });
+  // Canvas-Element für das Diagramm
+  const ctx = document.getElementById(chartId).getContext('2d');
+
+  // Erstellen des Kurvendiagramms (Liniendiagramms) mit Chart.js
+  const chart = new Chart(ctx, {
+    type: 'line',
+    data: gameData,
+    options: gameOptions
+  });
 }
 
 // Event-Listener für das Laden der Seite
 document.addEventListener('DOMContentLoaded', () => {
-    // Funktion aufrufen, um das Diagramm zu erstellen und anzuzeigen
-    createGameChart();
+  // Sort the arrays and create the game charts
+  sortAndCreateGameCharts();
 });
