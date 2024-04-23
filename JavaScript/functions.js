@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         changeContent('prognosis');
     });
 });
+
 // Difinieren der Arrays
 let arr1 = ["a", "b", "c", "d", "e", "f", "g"];
 let arr2 = ["A", "B", "C", "D", "E", "F", "G"];
@@ -71,7 +72,7 @@ let arr4 = [5, 6, 8, 3, 2, 4, 5];
 function createGameChart() {
     // Daten für das Diagramm (Beispielwerte)
     const gameData = {
-        labels: [arr1, arr2,],  // Labels for the X-Axis
+        labels: [],  // Labels for the X-Axis
         datasets: [
             {
                 label: 'Bewertung',
@@ -83,6 +84,7 @@ function createGameChart() {
                 pointHoverRadius: 8, // Punkt-Radius bei Hover
                 fill: false // Keine Füllung unter der Linie
             },
+            
             {
                 label: 'Bewertung (dotted)',
                 data: [arr4,], // Null-Werte für die ersten vier Punkte, Bewertung für den letzten Punkt
@@ -107,6 +109,9 @@ function createGameChart() {
                     },
 
                     x: {
+                        ticks: {
+                         
+                        },
                         min: 0,
                             
                         max: 8 // Maximale x-Achsenwert
