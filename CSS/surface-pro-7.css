@@ -21,7 +21,7 @@
       }
 
     .art{
-        margin-top: 3%;
+        margin-top: 2.5%;
         margin-left: 10%;
         margin-right: 10%;
         max-width: 70%;
@@ -31,6 +31,26 @@
     .chart{
         padding: 0.5%;
         border: 2px solid var(--s-p-7-b-color);
+    }
+
+    /* General Settings */
+
+    span.FirstLetter{
+        /*float: left;*/
+        color: var(--fl-c);
+        }
+
+    span.RestLetter{
+        /*float: left;*/
+        color: var(--rl-c);
+    }
+
+    div.name{
+        padding: 0.5%;
+        border: 2px solid var(--s-p-7-b-color);
+        max-width: fit-content;
+        background-color: var(--h-c-bg);
+        border-radius: 5px;
     }
 
     /* Previous */
@@ -48,14 +68,20 @@
         padding: 0.5%;
         border: 2px solid var(--s-p-7-b-color);
         max-width: 100%;
+        background-color: var(--h-c-bg);
+        border-radius: 5px;
+        display: flex;
+        color: var(--rl-c);
     }
     
     div.previous > div.art > div.name{
         padding: 0.5%;
         border: 2px solid var(--s-p-7-b-color);
-        max-width: 60%;
+        max-width: fit-content;
+        background-color: var(--h-c-bg);
+        border-radius: 5px;
     }
-
+    
     div.previous > div.art{
         display: flex;
         flex-direction: column;

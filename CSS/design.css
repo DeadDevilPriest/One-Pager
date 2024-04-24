@@ -24,4 +24,10 @@ body{
     --s-p-7-main-color:      rgb(194, 194, 253);
     --s-p-7-color:           rgb(0, 0, 0);
     --s-p-7-b-color:         rgb(0, 0, 0);
+
+    /* Theme Colors */
+
+    --h-c-bg:                rgb(0, 0, 0);
+    --fl-c:                  rgb(255, 0, 0);
+    --rl-c:                  rgb(255, 255, 255);
 }
