@@ -62,11 +62,15 @@
         max-width: 80%;
         padding: 0.5%;
         content: none;
+        background-image: url('...\data\Media\WCCFresidentevilvillage26.jpg');
+        background-size: auto;
+        background-position: center;
+        color:             var(--sp-c);
     }
    
     div.previous > div.art > div.explanation{
         padding: 0.5%;
-        border: 2px solid var(--s-p-7-b-color);
+        border: 2px solid var(--h-c-bg);
         max-width: 100%;
         background-color: var(--h-c-bg);
         border-radius: 5px;
@@ -76,7 +80,7 @@
     
     div.previous > div.art > div.name{
         padding: 0.5%;
-        border: 2px solid var(--s-p-7-b-color);
+        border: 2px solid var(--h-c-bg);
         max-width: fit-content;
         background-color: var(--h-c-bg);
         border-radius: 5px;
