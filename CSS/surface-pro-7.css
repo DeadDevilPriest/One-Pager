@@ -30,7 +30,7 @@
 
     .chart{
         padding: 0.5%;
-        border: 2px solid var(--s-p-7-b-color);
+        border: 2px solid var(--h-b-c);
     }
 
     /* General Settings */
@@ -53,6 +53,18 @@
         border-radius: 5px;
     }
 
+    div.explanation{
+        padding: 0.5%;
+        border: 2px solid var(--s-p-7-b-color);
+        max-width: fit-content;
+        background-color: var(--h-c-bg);
+        border-radius: 5px;
+    }
+
+    span.space{
+        color:     var(--sp-c);
+    }
+
     /* Previous */
 
     .previous{
@@ -70,7 +82,7 @@
    
     div.previous > div.art > div.explanation{
         padding: 0.5%;
-        border: 2px solid var(--h-c-bg);
+        border: 2px solid var(--h-b-c);
         max-width: 100%;
         background-color: var(--h-c-bg);
         border-radius: 5px;
@@ -80,7 +92,7 @@
     
     div.previous > div.art > div.name{
         padding: 0.5%;
-        border: 2px solid var(--h-c-bg);
+        border: 2px solid var(--h-b-c);
         max-width: fit-content;
         background-color: var(--h-c-bg);
         border-radius: 5px;
@@ -105,14 +117,20 @@
 
     div.upcoming > div.art > div.name{
         padding: 0.5%;
-        border: 2px solid var(--s-p-7-b-color);
-        max-width: 25%;
+        border: 2px solid var(--h-b-c);
+        max-width: fit-content;
+        background-color: var(--h-c-bg);
+        border-radius: 5px;
     }
 
     div.upcoming > div.art > div.explanation{
         padding: 0.5%;
-        border: 2px solid var(--s-p-7-b-color);
+        border: 2px solid var(--h-b-c);
         max-width: 100%;
+        background-color: var(--h-c-bg);
+        border-radius: 5px;
+        display: flex;
+        color: var(--rl-c);
     }
 
     div.upcoming > div.art {
@@ -137,15 +155,20 @@
 
     div.prognosis > div.art > div.name{
         padding: 0.5%;
-        border: 2px solid var(--s-p-7-b-color);
-        max-width: 60%;
+        border: 2px solid var(--h-b-c);
+        max-width: fit-content;
+        background-color: var(--h-c-bg);
+        border-radius: 5px;
     }
 
     div.prognosis > div.art  > div.explanation{
-        padding: 0%;
-        border: 2px solid var(--s-p-7-b-color);
+        padding: 0.5%;
+        border: 2px solid var(--h-b-c);
         max-width: 100%;
-        max-height: 30%;
+        background-color: var(--h-c-bg);
+        border-radius: 5px;
+        display: flex;
+        color: var(--rl-c);
     }
 
     div.prognosis > div.art.chart{
