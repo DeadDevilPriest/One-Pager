@@ -21,13 +21,13 @@ body{
     --s-duo-b-color:         rgb(0, 0, 0);
 
     /* Surface Pro 7 */
-    --s-p-7-main-color:      rgb(194, 194, 253);
+    /*--s-p-7-main-color:      rgb(194, 194, 253);*/
     --s-p-7-color:           rgb(0, 0, 0);
     --s-p-7-b-color:         rgb(0, 0, 0);
 
     /* Theme Colors */
 
-    --h-c-bg:                rgba(0, 0, 0, 0.333);
+    --h-c-bg:                rgba(0, 0, 0, 0.8);
     --fl-c:                  rgb(255, 0, 0);
     --rl-c:                  rgb(255, 255, 255);
     --h-b-c:                 rgba(0, 0, 0, 0);

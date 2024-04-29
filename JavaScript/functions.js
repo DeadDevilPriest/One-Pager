@@ -108,19 +108,35 @@ function createGameCharts() {
   };
 
   // Optionen für das Diagramm
-  const gameOptions = {
-    scales: {
-      y: {
-        min: 5,
-        max: 10 // Maximale y-Achsenwert
-      },
-      x: {
-        ticks: {},
-        min: 0,
-        max: 8 // Maximale x-Achsenwert
-      }
-    }
-  };
+   const gameOptions = {
+      scales: {
+          y: {
+              min: 6,
+              max: 10, // Maximale y-Achsenwert
+                grid: {
+                    color: 'white',
+                  },
+                ticks: {
+                  color: 'white',
+                },
+              },
+              x: {
+                min: 0,
+                max: 8, // Maximale x-Achsenwert
+                  grid: {
+                    color: 'white',
+                  },
+                ticks: {
+                  color: 'white',
+                },
+                label: {
+                  color: 'white',
+                },
+              }
+            }
+          };
+
+
 
   // Canvas-Element für das Diagramm
   const ctx1 = document.getElementById('gameChart1').getContext('2d');
