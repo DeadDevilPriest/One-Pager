@@ -119,22 +119,25 @@ function createGameCharts() {
                 ticks: {
                   color: 'white',
                 },
-              },
-              x: {
-                min: 0,
-                max: 8, // Maximale x-Achsenwert
-                  grid: {
-                    color: 'white',
-                  },
-                ticks: {
-                  color: 'white',
-                },
                 label: {
                   color: 'white',
                 },
+                },
+                x: {
+                  min: 0,
+                  max: 8, // Maximale x-Achsenwert
+                    grid: {
+                      color: 'white',
+                    },
+                  ticks: {
+                    color: 'white',
+                  },
+                  label: {
+                    color: 'white',
+                  },
+                }
               }
-            }
-          };
+            };
 
 
 
