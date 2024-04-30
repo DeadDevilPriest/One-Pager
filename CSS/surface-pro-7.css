@@ -1,6 +1,5 @@
 /* Surface Pro 7 */
-@media screen and (max-width: 1000px) and (min-width: 912px){
-    
+@media screen  and (max-width: 1000px) and (min-width: 912px){
     body{
         /*background-color: var(--s-p-7-main-color);*/
         color: var(--s-p-7-color);
@@ -21,16 +20,18 @@
     }
 
     main{
-        margin-top: 10%;
-        margin-bottom: 37em;
         left: 0;
         right: 0;
-        padding-bottom: 1mm;
+        padding-bottom: 1em;
+        padding-top: 5em;
+        height: 85rem;
+        overflow: hidden;
+        overflow-y: auto;
     }
 
     footer{
         position: fixed;
-        bottom: 0;
+        bottom: 1rem;
         left: 0;
         right: 0;
         padding-bottom: 1mm;
@@ -171,6 +172,7 @@
         max-width: 80%;
         content: none;
         z-index: 0;
+        height: auto;
     }
 
     div.upcoming > div.art > div.name{
