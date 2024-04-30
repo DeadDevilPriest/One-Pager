@@ -62,8 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
 // Difinieren der Arrays
 let arr1 = ["Resident Evil", "Resident Evil 2", "Resident Evil 3: Nemisis", "Resident Evil 4", "Resident Evil 5", "Resident Evil 6"];
 let arr2 = ["Resident Evil 0", "Resident Evil 2 Remake", "Resident Evil 3 Remake", "Resident Evil 4 Remake", "Resident Evil 5 Remake", "Resident Evil 6 Remake"];
