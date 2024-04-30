@@ -1,5 +1,5 @@
 /* Surface Pro 7 */
-@media screen  and (max-width: 1000px) and (min-width: 912px){
+@media screen  and (max-width: 1090px) and (min-width: 1070px){
     body{
         /*background-color: var(--s-p-7-main-color);*/
         color: var(--s-p-7-color);
