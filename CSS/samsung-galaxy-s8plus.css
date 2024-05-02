@@ -1,4 +1,4 @@
-/* Surface Pro 7 */
+/* Samsung A13 */
 @media screen  and (max-width: 450px) and (min-width: 400px){
     body{
         /*background-color: var(--s-p-7-main-color);*/
@@ -17,6 +17,11 @@
         left: 0;
         right: 0;
         padding-top: 1mm;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
     main{
@@ -281,7 +286,7 @@
         border: 2px solid black;
     }*/
 
-    .Samsung-Galaxy-S8Plus{font-size: 1em;}
+    .Samsung-Galaxy-S8Plus{font-size: auto;}
     .Surface-Duo{display:none;}
     .Surface-Pro-7{display: none;}
 }
