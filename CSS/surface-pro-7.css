@@ -280,7 +280,7 @@
         border: 2px solid black;
     }*/
 
-    .Samsung-Galaxy-S8Plus{display:none;}
+    .Samsung-Galaxy-S8Plus{font-size: auto;}
     .Surface-Duo{display:none;}
-    .Surface-Pro-7{font-size: 1em;}
+    .Surface-Pro-7{font-size: auto;}
 }
