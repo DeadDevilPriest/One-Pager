@@ -1,5 +1,5 @@
 /* Samsung A13 */
-@media screen  and (max-width: 450px) and (min-width: 400px){
+@media screen  and (max-width: 412px) and (min-width: 400px){
     body{
         /*background-color: var(--s-p-7-main-color);*/
         color: var(--s-p-7-color);
@@ -17,11 +17,6 @@
         left: 0;
         right: 0;
         padding-top: 1mm;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
     }
 
     main{
@@ -32,6 +27,10 @@
         overflow: hidden;
         overflow-y: auto;
         display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
     footer{
@@ -74,9 +73,11 @@
 
     .footer-container{
         bottom: fixed;
-        display: grid;
-        grid-template-columns: auto auto auto auto auto auto auto;
-        gap: 1px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         background-color:   var(--h-c-bg);
         color:              var(--rl-c);
         width: auto;
@@ -91,9 +92,11 @@
     }
 
     .grid-container {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 1px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         background-color: #000000;
         padding: 3px;
         margin-top: 0%;
@@ -102,6 +105,8 @@
       
       .grid-container > button {
         background-color: var(--bg-c);
+        width: 33.33%;
+        max-width: 33.33%;
         text-align: center;
         padding: 2%;
       }
